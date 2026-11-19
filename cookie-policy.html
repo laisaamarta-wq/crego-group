@@ -107,8 +107,26 @@ h2{font-size:clamp(30px,3.8vw,50px)}
 .cur-light .cur-ring{border-color:rgba(10,19,56,.35)}
 
 
-/* ===== mobile art direction ===== */
+
+/* ===== desktop footer art direction ===== */
 .swipe-ui,.ftr-mark{display:none}
+@media (min-width:601px){
+  .ftr{position:relative;overflow:hidden;padding:104px 0 34px;background:radial-gradient(60% 70% at 0% 0%,rgba(26,52,150,.35),rgba(5,10,34,0) 60%),radial-gradient(40% 60% at 100% 100%,rgba(47,107,255,.12),rgba(5,10,34,0) 70%),var(--ink)}
+  .ftr::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(140,200,255,.35) 30%,rgba(140,200,255,.35) 70%,transparent)}
+  .ftr .tagline{font:400 clamp(20px,1.6vw,24px)/1.35 var(--display);letter-spacing:-.01em;color:#E7EDFF;max-width:22ch;margin-top:28px}
+  .ftr h4{display:flex;align-items:center;gap:10px}
+  .ftr h4::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+  .ftr li a,.ftr p{transition:color .3s}
+  .ftr-grid>div:nth-child(3){padding:24px 26px;border:1px solid var(--line-2);border-radius:20px;background:linear-gradient(160deg,rgba(68,212,255,.07),rgba(255,255,255,.015) 55%)}
+  .ftr-grid>div:nth-child(3) h4{margin-bottom:16px}
+  .ftr-mark{display:block;margin:84px 0 -.06em;font:600 clamp(120px,19vw,300px)/1 var(--display);padding-top:.04em;margin-bottom:-.18em;letter-spacing:-.055em;text-align:center;background:linear-gradient(180deg,rgba(150,200,255,.16) 0%,rgba(150,200,255,.03) 75%,rgba(150,200,255,0) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;pointer-events:none}
+  .ftr-bot{position:relative;margin-top:0;align-items:center}
+  .ftr-clock{padding:8px 14px;border:1px solid var(--line-2);border-radius:999px;background:rgba(6,14,48,.6);font-size:12.5px}
+}
+@media (min-width:1101px){
+  .ftr-grid{grid-template-columns:1.3fr .9fr 1.2fr .6fr;gap:48px;align-items:start}
+}
+/* ===== mobile art direction ===== */
 @media (max-width:600px){
   .sec{padding:76px 0}
   h2{font-size:clamp(30px,8.4vw,36px)}
@@ -169,11 +187,31 @@ h2{font-size:clamp(30px,3.8vw,50px)}
   .ftr-grid>div:nth-child(2){order:1}.ftr-grid>div:nth-child(4){order:2}
   .ftr h4{font-size:10.5px;margin-bottom:14px}
   .ftr p,.ftr li{font-size:14px;line-height:1.8}
-  .ftr-mark{display:block;margin:40px 0 0;font:600 25vw/0.8 var(--display);letter-spacing:-.05em;text-align:center;background:linear-gradient(180deg,rgba(140,190,255,.16),rgba(140,190,255,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
+  .ftr-mark{display:block;margin:40px 0 0;font:600 25vw/1 var(--display);margin-bottom:-.16em;letter-spacing:-.05em;text-align:center;background:linear-gradient(180deg,rgba(140,190,255,.16),rgba(140,190,255,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
   .ftr-bot{flex-direction:column;align-items:center;text-align:center;gap:14px;margin-top:6px;padding-top:22px}
   .ftr-bot nav{gap:18px}
   .ftr-bot>span:first-child{order:3}
   .ftr-clock{font-size:12px}
+}
+
+
+/* ===== desktop footer art direction ===== */
+.ftr-mark{display:none}
+@media (min-width:601px){
+  .ftr{position:relative;overflow:hidden;padding:104px 0 34px;background:radial-gradient(60% 70% at 0% 0%,rgba(26,52,150,.35),rgba(5,10,34,0) 60%),radial-gradient(40% 60% at 100% 100%,rgba(47,107,255,.12),rgba(5,10,34,0) 70%),var(--ink)}
+  .ftr::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(140,200,255,.35) 30%,rgba(140,200,255,.35) 70%,transparent)}
+  .ftr .tagline{font:400 clamp(20px,1.6vw,24px)/1.35 var(--display);letter-spacing:-.01em;color:#E7EDFF;max-width:22ch;margin-top:28px}
+  .ftr h4{display:flex;align-items:center;gap:10px}
+  .ftr h4::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+  .ftr li a,.ftr p{transition:color .3s}
+  .ftr-grid>div:nth-child(3){padding:24px 26px;border:1px solid var(--line-2);border-radius:20px;background:linear-gradient(160deg,rgba(68,212,255,.07),rgba(255,255,255,.015) 55%)}
+  .ftr-grid>div:nth-child(3) h4{margin-bottom:16px}
+  .ftr-mark{display:block;margin:84px 0 -.06em;font:600 clamp(120px,19vw,300px)/1 var(--display);padding-top:.04em;margin-bottom:-.18em;letter-spacing:-.055em;text-align:center;background:linear-gradient(180deg,rgba(150,200,255,.16) 0%,rgba(150,200,255,.03) 75%,rgba(150,200,255,0) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;pointer-events:none}
+  .ftr-bot{position:relative;margin-top:0;align-items:center}
+  .ftr-clock{padding:8px 14px;border:1px solid var(--line-2);border-radius:999px;background:rgba(6,14,48,.6);font-size:12.5px}
+}
+@media (min-width:1101px){
+  .ftr-grid{grid-template-columns:1.3fr .9fr 1.2fr .6fr;gap:48px;align-items:start}
 }
 
 
@@ -280,6 +318,8 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}
   .ck .last{padding-bottom:18px}
   .contact{grid-template-columns:1fr}
   .ftr-grid{grid-template-columns:1fr}
+  .ftr-mark{display:block;margin:40px 0 0;font:600 25vw/1 var(--display);margin-bottom:-.16em;letter-spacing:-.05em;text-align:center;background:linear-gradient(180deg,rgba(140,190,255,.16),rgba(140,190,255,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ftr-bot{flex-direction:column;align-items:center;gap:12px}
   .switch a{padding:9px 14px;font-size:13px}
   .back span{display:none}
 }
@@ -341,11 +381,12 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}
 </main>
 <footer class="ftr"><div class="wrap">
   <div class="ftr-grid">
-    <div><a class="logo" href="index.html" aria-label="CREGO GROUP — home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8BEBFF"/><stop offset="1" stop-color="#2F6BFF"/></linearGradient></defs><path d="M14 2 4 12l4 4L18 6z" fill="url(#lg)"/><path d="M20 8 8 20l4 4 12-12z" fill="url(#lg)" opacity=".85"/><path d="M26 14 14 26l4 4 12-12z" fill="#fff"/></svg><b>CREGO</b><span>GROUP</span></a><p class="tagline">Online consumer-lending group, headquartered in Riga, Latvia.</p></div>
+    <div><a class="logo" href="index.html" aria-label="CREGO GROUP — home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8BEBFF"/><stop offset="1" stop-color="#2F6BFF"/></linearGradient></defs><path d="M14 2 4 12l4 4L18 6z" fill="url(#lg)"/><path d="M20 8 8 20l4 4 12-12z" fill="url(#lg)" opacity=".85"/><path d="M26 14 14 26l4 4 12-12z" fill="#fff"/></svg><b>CREGO</b><span>GROUP</span></a><p class="tagline">Online consumer&#8209;lending group, headquartered in Riga, Latvia.</p></div>
     <div><h4>Contacts</h4><ul><li>General inbox: <a href="mailto:info@crego.com">info@crego.com</a></li><li>Phone: <a href="tel:+37127000077">+371 27000077</a></li><li><a href="https://www.linkedin.com/company/crego-group/" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
-    <div><h4>Registered office</h4><p>Crego Group (SIA “CREGO GROUP”)<br>Skanstes Street 7 k‑1<br>Riga, LV‑1013, Latvia<br>Registration No.: 40203755353</p></div>
+    <div><h4>Registered office</h4><p>Crego Group (SIA “CREGO GROUP”)<br>Skanstes Street 7 k‑1<br>Riga, LV‑1013, Latvia<br>Registration No.:&nbsp;40203755353</p></div>
     <div><h4>Explore</h4><ul><li><a href="index.html#company">Company</a></li><li><a href="index.html#succeed">Why we succeed</a></li><li><a href="index.html#careers">Careers</a></li><li><a href="index.html#contacts">Contacts</a></li></ul></div>
   </div>
+  <div class="ftr-mark" aria-hidden="true">CREGO</div>
   <div class="ftr-bot"><span>© 2026 SIA CREGO GROUP</span><nav aria-label="Legal"><a href="cookie-policy.html">Cookie Policy</a><a href="privacy-policy.html">Privacy Policy</a></nav></div>
 </div></footer>
 <script>
