@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CREGO GROUP — Building the future of digital lending in Europe</title>
-<meta name="description" content="Crego Group is headquartered in Riga, Latvia. We build and support online consumer-lending across Europe through disciplined governance, risk management, and a modern engineering platform.">
+<meta name="description" content="CREGO GROUP combines technology, risk expertise and operational excellence to develop and support digital consumer-lending businesses across Europe. Headquartered in Riga, Latvia.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://crego.com/">
 <meta property="og:type" content="website">
@@ -181,13 +181,13 @@ section{position:relative}
 .cards.six p{margin-top:2px}
 .card{--mx:50%;--my:0%;position:relative;border-radius:var(--r-lg);padding:30px 28px 34px;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(28,48,130,.55),rgba(11,23,72,.6));border:1px solid var(--line-2);overflow:hidden;isolation:isolate;transition:transform .6s var(--ease),border-color .4s}
 .card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(68,212,255,.16),transparent 55%);opacity:0;transition:opacity .4s}
-.card:hover{transform:translateY(-6px);border-color:rgba(68,212,255,.45)}
+.card:hover{border-color:rgba(68,212,255,.35)}
 .card:hover::before{opacity:1}
 .card .num{font:500 12px/1 var(--body);letter-spacing:.22em;color:var(--mute-2)}
 .card .art{height:170px;margin:18px -8px 22px;display:flex;align-items:center;justify-content:center;position:relative}
 .card .art::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(47,107,255,.35),transparent 65%);filter:blur(4px)}
 .card .art svg{position:relative;width:150px;height:150px;transition:transform .8s var(--ease)}
-.card:hover .art svg{transform:translateY(-6px) scale(1.04)}
+
 .card .kicker{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
 .card h3{font-size:22px;line-height:1.2;margin-bottom:12px}
 .card p{color:#B5C1E4;font-size:15.5px;line-height:1.55}
@@ -303,96 +303,21 @@ section{position:relative}
 .ftr-bot nav{display:flex;gap:22px}
 
 
-/* custom cursor */
-.cur-dot,.cur-ring,.cur-glow{position:fixed;left:0;top:0;pointer-events:none;z-index:400;opacity:0;transition:opacity .3s}
-.has-cursor .cur-dot,.has-cursor .cur-ring,.has-cursor .cur-glow{opacity:1}
-.has-cursor.cur-out .cur-dot,.has-cursor.cur-out .cur-ring,.has-cursor.cur-out .cur-glow{opacity:0}
+/* custom cursor — minimal */
+.cur-dot,.cur-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:400;opacity:0;transition:opacity .3s}
+.has-cursor .cur-dot,.has-cursor .cur-ring{opacity:1}
+.has-cursor.cur-out .cur-dot,.has-cursor.cur-out .cur-ring{opacity:0}
 .has-cursor,.has-cursor *{cursor:none!important}
-.cur-dot{width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:#fff;box-shadow:0 0 6px 1px #fff,0 0 14px 3px rgba(68,212,255,.95),0 0 34px 8px rgba(68,212,255,.4);transition:opacity .3s,scale .25s var(--ease)}
-.cur-ring{width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:1px solid rgba(150,228,255,.7);box-shadow:0 0 14px rgba(68,212,255,.35),inset 0 0 12px rgba(68,212,255,.18);display:grid;place-items:center;transition:opacity .3s,width .45s var(--ease),height .45s var(--ease),margin .45s var(--ease),background .4s,border-color .4s,border-style .2s}
-.cur-ring::before{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px dashed rgba(150,228,255,.0);transition:border-color .4s;animation:curspin 9s linear infinite}
-@keyframes curspin{to{transform:rotate(360deg)}}
-.cur-ring b{position:absolute;top:calc(100% + 10px);font:700 10px/1 var(--body);letter-spacing:.26em;color:#fff;text-shadow:0 0 6px rgba(68,212,255,1),0 0 14px rgba(68,212,255,.8);opacity:0;transform:scale(.7);transition:opacity .3s,transform .4s var(--ease)}
-.cur-glow{width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(circle,rgba(68,190,255,.11) 0,rgba(47,107,255,.05) 35%,rgba(0,0,0,0) 70%);mix-blend-mode:screen}
-.cur-link .cur-ring{width:66px;height:66px;margin:-33px 0 0 -33px;background:rgba(68,212,255,.1);border-color:rgba(190,240,255,.95)}
-.cur-link .cur-dot{scale:.4}
-.cur-globe .cur-ring{width:84px;height:84px;margin:-42px 0 0 -42px;border-color:rgba(170,235,255,.8);background:transparent}
-.cur-globe .cur-ring::before{border-color:rgba(150,228,255,.45)}
-.cur-globe .cur-ring b{opacity:1;transform:none}
-.cur-globe .cur-dot{scale:.7}
-.cur-down .cur-ring{width:30px;height:30px;margin:-15px 0 0 -15px}
-.cur-globe.cur-down .cur-ring{width:70px;height:70px;margin:-35px 0 0 -35px}
+.cur-dot{width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#fff;box-shadow:0 0 6px rgba(120,220,255,.6)}
+.cur-ring{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:1px solid rgba(200,230,255,.38);transition:opacity .3s,width .4s var(--ease),height .4s var(--ease),margin .4s var(--ease),border-color .3s}
+.cur-ring b{display:none}
+.cur-link .cur-ring{width:44px;height:44px;margin:-22px 0 0 -22px;border-color:rgba(200,235,255,.7)}
+.cur-globe .cur-ring{width:40px;height:40px;margin:-20px 0 0 -20px;border-color:rgba(200,235,255,.55)}
+.cur-down .cur-ring{width:24px;height:24px;margin:-12px 0 0 -12px}
 .has-cursor .gl-hint{display:none}
-.cur-light .cur-dot{background:#0A1338;box-shadow:0 0 0 2px rgba(255,255,255,.9),0 0 14px 3px rgba(47,107,255,.55)}
-.cur-light .cur-ring{border-color:rgba(47,107,255,.7);box-shadow:0 0 14px rgba(47,107,255,.25)}
-.cur-light .cur-glow{opacity:0}
+.cur-light .cur-dot{background:#0A1338;box-shadow:none}
+.cur-light .cur-ring{border-color:rgba(10,19,56,.35)}
 
-
-/* scroll route */
-main{position:relative}
-.route{position:absolute;left:0;top:0;width:100%;pointer-events:none;z-index:3}
-.route svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
-.rt-base{fill:none;stroke:rgba(140,190,255,.12);stroke-width:1}
-.rt-live{fill:none;stroke:url(#rtg);stroke-width:1.6;stroke-linecap:round;filter:drop-shadow(0 0 4px rgba(68,212,255,.8))}
-.rt-head{fill:#fff;filter:drop-shadow(0 0 4px #fff) drop-shadow(0 0 10px #44D4FF) drop-shadow(0 0 22px rgba(68,212,255,.7))}
-.rt-nodes circle{fill:#0B1748;stroke:rgba(140,190,255,.35);stroke-width:1;transition:fill .6s,stroke .6s,r .6s}
-.rt-nodes circle.on{fill:#BFF2FF;stroke:#44D4FF;filter:drop-shadow(0 0 6px #44D4FF)}
-.rt-nodes circle.halo{fill:none;stroke:rgba(68,212,255,0);transition:stroke .6s}
-.rt-nodes circle.halo.on{fill:none;stroke:rgba(68,212,255,.35);filter:none}
-@media (max-width:1100px){.route{display:none}}
-/* card network */
-.cards.six{position:relative;perspective:1200px}
-.card-net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible}
-.card-net path{fill:none;stroke:rgba(130,225,255,.95);stroke-width:1.6;stroke-dasharray:4 7;animation:netdash 1.4s linear infinite;filter:drop-shadow(0 0 3px rgba(68,212,255,.8))}
-.card-net circle{fill:#CFF6FF;filter:drop-shadow(0 0 5px #44D4FF)}
-@keyframes netdash{to{stroke-dashoffset:-22}}
-.cards.six .card{transform-style:preserve-3d;transition:transform .5s var(--ease),border-color .4s,box-shadow .5s}
-.cards.six .card:hover{box-shadow:0 30px 60px -30px rgba(68,212,255,.35)}
-.cards.six .card.near{border-color:rgba(68,212,255,.55);box-shadow:inset 0 0 30px rgba(68,212,255,.08),0 0 24px -6px rgba(68,212,255,.35)}
-/* clock */
-.ftr-clock{display:inline-flex;align-items:center;gap:10px;color:var(--mute)}
-.ftr-clock i{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:blink 2s ease-in-out infinite}
-@keyframes blink{50%{opacity:.35}}
-.riga-time{font-variant-numeric:tabular-nums}
-
-/* legal views */
-.legal{position:fixed;inset:0;z-index:150;overflow-y:auto;overscroll-behavior:contain;background:radial-gradient(70% 50% at 85% 0%,rgba(26,52,150,.55),rgba(5,10,34,0) 70%),radial-gradient(50% 40% at 0% 100%,rgba(19,42,122,.45),rgba(5,10,34,0) 70%),#050A22;opacity:0;transition:opacity .45s var(--ease)}
-.legal[hidden]{display:none}
-.legal:focus{outline:none}
-.legal.open{opacity:1}
-.legal-bar{position:sticky;top:0;z-index:2;background:rgba(5,10,34,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.legal-bar .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
-.legal-back{height:42px;padding:0 18px;font-size:14px}
-.legal-back svg{width:16px;height:16px}
-.legal-back:hover svg{transform:translateX(-3px)}
-.legal-doc{max-width:900px;padding-top:clamp(56px,8vw,96px);padding-bottom:80px}
-.legal-doc h1{font-size:clamp(40px,5.4vw,72px);margin:22px 0 14px}
-.legal-date{font:600 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:clamp(40px,5vw,64px)}
-.legal-doc p,.legal-doc li{color:#BFC9E8;font-size:16.5px;line-height:1.75}
-.legal-doc p+p{margin-top:14px}
-.legal-doc a{color:#fff;border-bottom:1px solid rgba(68,212,255,.6);transition:border-color .3s,color .3s}
-.legal-doc a:hover{color:var(--cyan)}
-.legal-intro{padding:clamp(26px,3.5vw,40px);border:1px solid var(--line-2);border-radius:var(--r-lg);background:linear-gradient(160deg,rgba(68,212,255,.08),rgba(255,255,255,.02));margin-bottom:clamp(40px,5vw,60px)}
-.legal-intro h2{font-size:22px;margin-bottom:16px}
-.legal-intro ul{margin:16px 0 18px;padding:0;list-style:none}
-.legal-intro li{position:relative;padding-left:22px}
-.legal-intro li::before{content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
-.legal-doc section{padding:30px 0;border-top:1px solid var(--line)}
-.legal-doc section h2{font-size:clamp(22px,2.2vw,28px);margin-bottom:14px;display:flex;gap:14px;align-items:baseline}
-.legal-doc section h2 span{font:500 14px/1 var(--display);color:var(--cyan);letter-spacing:.06em}
-.legal-decl h3{font-size:19px;margin:30px 0 10px;display:flex;align-items:center;gap:10px}
-.legal-decl h3 em{font:600 11px/1 var(--body);font-style:normal;padding:5px 9px;border-radius:999px;border:1px solid var(--line-2);color:var(--cyan)}
-.tbl{margin-top:16px;overflow-x:auto;border:1px solid var(--line-2);border-radius:16px;background:rgba(255,255,255,.02)}
-.tbl table{width:100%;border-collapse:collapse;min-width:640px;font-size:14px}
-.tbl th{text-align:left;font:700 11px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8FA2D4;padding:14px 16px;border-bottom:1px solid var(--line-2);background:rgba(68,212,255,.05)}
-.tbl td{padding:14px 16px;color:#C9D3F0;vertical-align:top;border-bottom:1px solid var(--line);line-height:1.55}
-.tbl tr:last-child td{border-bottom:0}
-.tbl td:first-child{color:#fff;font-weight:600;white-space:nowrap}
-.legal-note{margin-top:18px;font-size:13.5px!important;color:var(--mute-2)!important}
-.legal-empty{padding:28px;border:1px dashed var(--line-2);border-radius:var(--r-lg)}
-.legal-foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mute-2)}
-.legal-foot a{color:#fff}
-.legal-open{overflow:hidden}
 /* reveal */
 .rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
@@ -464,7 +389,7 @@ main{position:relative}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="cur-glow" id="curGlow" aria-hidden="true"></div><div class="cur-ring" id="curRing" aria-hidden="true"><b>DRAG</b></div><div class="cur-dot" id="curDot" aria-hidden="true"></div>
+<div class="cur-ring" id="curRing" aria-hidden="true"><b>DRAG</b></div><div class="cur-dot" id="curDot" aria-hidden="true"></div>
 
 <header class="hdr" id="hdr">
   <div class="wrap">
@@ -490,7 +415,6 @@ main{position:relative}
 </div>
 
 <main id="main">
-<div class="route" id="route" aria-hidden="true"><svg><defs><linearGradient id="rtg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8BEBFF"/><stop offset="1" stop-color="#2F6BFF"/></linearGradient></defs><path class="rt-base"/><path class="rt-live"/><g class="rt-nodes"></g><circle class="rt-head" r="4"/></svg></div>
 <!-- HERO -->
 <section class="hero" id="top" aria-labelledby="h-hero">
   <div class="stars" aria-hidden="true"></div>
@@ -501,7 +425,7 @@ main{position:relative}
   <div class="wrap hero-inner">
     <div class="eyebrow rv">European fintech group</div>
     <h1 id="h-hero"><span class="ln"><span>Building the future</span></span><span class="ln"><span style="--d:.08s">of digital lending</span></span><span class="ln"><span style="--d:.16s" class="grad">in Europe.</span></span></h1>
-    <p class="lead rv" style="--d:.3s">CREGO GROUP brings together technology, risk expertise and operational experience to build and support online consumer-lending businesses across Europe.</p>
+    <p class="lead rv" style="--d:.3s">CREGO GROUP combines technology, risk expertise and operational excellence to develop and support digital consumer-lending businesses across Europe.</p>
     <div class="hero-ctas rv" style="--d:.4s">
       <a class="btn btn-solid" href="#succeed">Why we succeed <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#contacts">Get in touch</a>
@@ -525,15 +449,15 @@ main{position:relative}
       <div class="eyebrow rv"><span class="n">01</span> Company — About us</div>
       <h2 id="h-who" class="rv" style="--d:.06s">Crego Group is headquartered in Riga, Latvia.</h2>
       <div class="body rv" style="--d:.12s">
-        <p>We build and support online consumer-lending across Europe through disciplined governance, risk management, and a modern engineering platform.</p>
-        <p>Our ambition is to become the fastest-growing online consumer-lending group in Europe, delivering clear, compliant customer journeys at scale.</p>
         <p>Our leadership team brings 15+ years’ experience in online consumer lending, data science, marketing, and IT.</p>
+        <p>The group is built on disciplined governance, risk management, and a modern engineering platform.</p>
+        <p>Our ambition is to become the fastest-growing online consumer-lending group in Europe, delivering clear, compliant customer journeys at scale.</p>
       </div>
     </div>
     <aside class="hq-card rv" style="--d:.15s" aria-label="Headquarters and disciplines">
       <svg class="radar" viewBox="0 0 110 110" aria-hidden="true"><g fill="none" stroke="rgba(68,212,255,.35)"><circle cx="55" cy="55" r="18"/><circle cx="55" cy="55" r="34"/><circle cx="55" cy="55" r="52" stroke-dasharray="2 4"/></g><circle cx="55" cy="55" r="5" fill="#44D4FF"><animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite"/></circle><circle cx="55" cy="55" r="5" fill="none" stroke="#44D4FF"><animate attributeName="r" values="6;40" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="3s" repeatCount="indefinite"/></circle></svg>
       <div class="coords"><span>Headquarters</span><span>56.95° N · 24.11° E</span></div>
-      <div class="city">Riga<small>Latvia · <span class="riga-time" data-tz>--:--</span> local time</small></div>
+      <div class="city">Riga<small>Latvia · <span class="riga-time" data-tz></span> local time</small></div>
       <div class="disc">
         <span>Data science</span><span>IT</span><span>People</span><span>Marketing &amp; Growth</span><span>Risk &amp; Compliance</span><span>Customer Operations</span>
       </div>
@@ -548,7 +472,7 @@ main{position:relative}
     <div class="sec-head">
       <div><div class="eyebrow rv"><span class="n">02</span> Why we succeed</div><h2 id="h-exp" class="rv" style="--d:.06s">Why We Succeed</h2></div>
     </div>
-    <div class="cards six" id="cards6"><svg class="card-net" aria-hidden="true"></svg>
+    <div class="cards six" id="cards6">
       <article class="card rv">
         <div class="art" aria-hidden="true"><svg viewBox="0 0 150 150"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8BEBFF"/><stop offset="1" stop-color="#2F6BFF"/></linearGradient></defs><rect x="22" y="26" width="106" height="94" rx="10" fill="#0E1D63" stroke="url(#a1)" stroke-width="1.5"/><g stroke="rgba(140,170,255,.25)"><path d="M34 100h82M34 80h82M34 60h82M34 40h82"/></g><path d="M34 98 52 86l14 6 18-24 16 8 18-30" fill="none" stroke="#8BEBFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g fill="#fff"><circle cx="52" cy="86" r="3.5"/><circle cx="84" cy="68" r="3.5"/><circle cx="118" cy="46" r="4.5"/></g><path d="M34 98 52 86l14 6 18-24 16 8 18-30V108H34z" fill="url(#a1)" opacity=".18"/></svg></div>
         <div class="kicker">01</div><h3>Data science</h3>
@@ -620,13 +544,13 @@ main{position:relative}
     <div class="ftr-grid">
       <div>
         <a class="logo" href="#top" aria-label="CREGO GROUP — back to top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M14 2 4 12l4 4L18 6z" fill="url(#lg)"/><path d="M20 8 8 20l4 4 12-12z" fill="url(#lg)" opacity=".85"/><path d="M26 14 14 26l4 4 12-12z" fill="#fff"/></svg><b>CREGO</b><span>GROUP</span></a>
-        <p class="tagline">Financing made simple! We provide smart lending, within reach.</p>
+        <p class="tagline">Online consumer-lending group, headquartered in Riga, Latvia.</p>
       </div>
       <div><h4>Contacts</h4><ul><li>General inbox: <a href="mailto:info@crego.com">info@crego.com</a></li><li>Phone: <a href="tel:+37127000077">+371 27000077</a></li><li><a href="https://www.linkedin.com/company/crego-group/" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
       <div><h4>Registered office</h4><p>Crego Group (SIA “CREGO GROUP”)<br>Skanstes Street 7 k‑1<br>Riga, LV‑1013, Latvia<br>Registration No.: 40203755353</p></div>
       <div><h4>Explore</h4><ul><li><a href="#company">Company</a></li><li><a href="#succeed">Why we succeed</a></li><li><a href="#careers">Careers</a></li><li><a href="#contacts">Contacts</a></li></ul></div>
     </div>
-    <div class="ftr-bot"><span>© 2026 SIA CREGO GROUP</span><span class="ftr-clock"><i></i>Riga, Latvia · 56.95° N 24.11° E · <span class="riga-time" data-tz data-sec>--:--:--</span></span><nav aria-label="Legal"><a href="#cookie-policy" data-legal>Cookie Policy</a><a href="#privacy-policy" data-legal>Privacy Policy</a></nav></div>
+    <div class="ftr-bot"><span>© 2026 SIA CREGO GROUP</span><span class="ftr-clock"><i></i>Riga, Latvia · 56.95° N 24.11° E · <span class="riga-time" data-tz data-sec></span></span><nav aria-label="Legal"><a href="#cookie-policy" data-legal>Cookie Policy</a><a href="#privacy-policy" data-legal>Privacy Policy</a></nav></div>
   </div>
 </footer>
 <!-- LEGAL VIEWS (styled versions of crego.com/cookie-policy and /privacy-policy) -->
@@ -759,7 +683,7 @@ addEventListener('hashchange',routeLegal); routeLegal();
 addEventListener('keydown',e=>{ if(e.key==='Escape'&&legalOpen) closeLegal(true); });
 /* custom cursor (desktop, fine pointer) */
 if(matchMedia('(hover: hover) and (pointer: fine)').matches){
-  const root=document.documentElement, dot=document.getElementById('curDot'), ring=document.getElementById('curRing'), glow=document.getElementById('curGlow');
+  const root=document.documentElement, dot=document.getElementById('curDot'), ring=document.getElementById('curRing');
   let x=innerWidth/2,y=innerHeight/2,rx=x,ry=y,gx=x,gy=y,started=false;
   addEventListener('pointermove',e=>{ if(e.pointerType!=='mouse')return; x=e.clientX;y=e.clientY;
     if(!started){started=true;rx=gx=x;ry=gy=y;root.classList.add('has-cursor');}
@@ -772,11 +696,10 @@ if(matchMedia('(hover: hover) and (pointer: fine)').matches){
   document.addEventListener('mouseleave',()=>root.classList.add('cur-out'));
   addEventListener('pointerdown',()=>root.classList.add('cur-down'));
   addEventListener('pointerup',()=>root.classList.remove('cur-down'));
-  const k1=RM?1:.2,k2=RM?1:.075;
+  const k1=RM?1:.25,k2=1;
   (function loop(){ rx+=(x-rx)*k1; ry+=(y-ry)*k1; gx+=(x-gx)*k2; gy+=(y-gy)*k2;
     dot.style.transform=`translate3d(${x}px,${y}px,0)`;
     ring.style.transform=`translate3d(${rx.toFixed(1)}px,${ry.toFixed(1)}px,0)`;
-    glow.style.transform=`translate3d(${gx.toFixed(1)}px,${gy.toFixed(1)}px,0)`;
     requestAnimationFrame(loop); })();
 }
 /* reveal */
@@ -795,82 +718,17 @@ counters.forEach(el=>{ if(!RM) el.textContent='0'; cio.observe(el); });
 
 /* Riga local time */
 const tzEls=[...document.querySelectorAll('[data-tz]')];
-const fmtM=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Riga',hour:'2-digit',minute:'2-digit'});
-const fmtS=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Riga',hour:'2-digit',minute:'2-digit',second:'2-digit'});
-const tick=()=>{const d=new Date(); tzEls.forEach(el=>el.textContent=(el.hasAttribute('data-sec')?fmtS:fmtM).format(d));};
+const pad=n=>String(n).padStart(2,'0');
+function rigaParts(d){
+  try{ const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Riga',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(d); const g=t=>(p.find(x=>x.type===t)||{}).value; if(g('hour')) return [g('hour'),g('minute'),g('second')]; }catch(e){}
+  // fallback: EU DST rule, Riga = UTC+2 / UTC+3
+  const y=d.getUTCFullYear(), lastSun=m=>{const x=new Date(Date.UTC(y,m+1,0,1));x.setUTCDate(x.getUTCDate()-x.getUTCDay());return x;};
+  const off=(d>=lastSun(2)&&d<lastSun(9))?3:2, r=new Date(d.getTime()+off*3600e3);
+  return [pad(r.getUTCHours()),pad(r.getUTCMinutes()),pad(r.getUTCSeconds())];
+}
+const tick=()=>{const [h,m,sec]=rigaParts(new Date()); tzEls.forEach(el=>el.textContent=el.hasAttribute('data-sec')?`${h}:${m}:${sec}`:`${h}:${m}`);};
 tick(); setInterval(tick,1000);
 
-/* card tilt + network to neighbours */
-const grid=document.getElementById('cards6');
-if(grid && !touch){
-  const net=grid.querySelector('.card-net'), cards=[...grid.querySelectorAll('.card')];
-  const ns='http://www.w3.org/2000/svg';
-  const centre=c=>({x:c.offsetLeft+c.offsetWidth/2, y:c.offsetTop+c.offsetHeight/2, w:c.offsetWidth, h:c.offsetHeight});
-  const cols=()=>{const t=cards[0].offsetTop; return cards.filter(c=>c.offsetTop===t).length;};
-  const clear=()=>{net.innerHTML=''; cards.forEach(c=>c.classList.remove('near'));};
-  cards.forEach((c,i)=>{
-    c.addEventListener('pointerenter',()=>{ clear(); const n=cols(), a=centre(c);
-      const nb=[i-1,i+1,i-n,i+n].filter(j=>j>=0&&j<cards.length&&!((j===i-1&&i%n===0)||(j===i+1&&(i+1)%n===0)));
-      nb.forEach(j=>{ const b=centre(cards[j]); cards[j].classList.add('near');
-        const horiz=Math.abs(b.y-a.y)<5;
-        const sx=a.x+(horiz?Math.sign(b.x-a.x)*a.w/2:0), sy=a.y+(horiz?0:Math.sign(b.y-a.y)*a.h/2);
-        const ex=b.x-(horiz?Math.sign(b.x-a.x)*b.w/2:0), ey=b.y-(horiz?0:Math.sign(b.y-a.y)*b.h/2);
-        const p=document.createElementNS(ns,'path'); const mx=(sx+ex)/2, my=(sy+ey)/2;
-        p.setAttribute('d',`M${sx} ${sy} Q ${mx+(horiz?0:24)} ${my+(horiz?-24:0)} ${ex} ${ey}`); net.appendChild(p);
-        [[sx,sy,3],[ex,ey,3],[(sx+ex)/2+(horiz?0:12),(sy+ey)/2+(horiz?-12:0),4.5]].forEach(([x,y,r])=>{const d=document.createElementNS(ns,'circle'); d.setAttribute('cx',x); d.setAttribute('cy',y); d.setAttribute('r',r); net.appendChild(d);});
-      });
-    });
-    c.addEventListener('pointermove',e=>{ if(RM)return; const r=c.getBoundingClientRect(), px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
-      c.style.transform=`rotateX(${(-py*7).toFixed(2)}deg) rotateY(${(px*8).toFixed(2)}deg) translateZ(0)`; });
-    c.addEventListener('pointerleave',()=>{ c.style.transform=''; clear(); });
-  });
-}
-
-/* scroll route through the sections */
-const route=document.getElementById('route');
-if(route && innerWidth>1100){
-  const main=document.getElementById('main'), svg=route.querySelector('svg'), base=svg.querySelector('.rt-base'), live=svg.querySelector('.rt-live'), head=svg.querySelector('.rt-head'), nodesG=svg.querySelector('.rt-nodes');
-  let L=0, stops=[], cur=0, target=0, built=false;
-  function build(){
-    const hero=document.querySelector('.hero'); const mt=main.getBoundingClientRect().top+scrollY;
-    const wrap=document.querySelector('#company .wrap'); const gx=wrap.getBoundingClientRect().left+ (parseFloat(getComputedStyle(wrap).paddingLeft)||0) - 46;
-    if(gx<24){route.style.display='none';return;} route.style.display='';
-    const anchors=['#company .eyebrow','#succeed .eyebrow','#careers .eyebrow','#contacts h2'].map(q=>document.querySelector(q)).filter(Boolean);
-    const startY=hero.offsetHeight-40;
-    const pts=[{x:gx,y:startY}].concat(anchors.map((a,i)=>{const r=a.getBoundingClientRect(); return {x: a.closest('.amb')? gx : gx, y:r.top+scrollY-mt+r.height/2};}));
-    route.style.height=main.offsetHeight+'px';
-    let d=`M${pts[0].x} ${pts[0].y}`;
-    for(let i=1;i<pts.length;i++){const a=pts[i-1], b=pts[i], my=(a.y+b.y)/2, sw=(i%2?1:-1)*26; d+=` C ${a.x+sw} ${my} ${b.x+sw} ${my} ${b.x} ${b.y}`;}
-    base.setAttribute('d',d); live.setAttribute('d',d);
-    L=live.getTotalLength(); live.style.strokeDasharray=L; live.style.strokeDashoffset=L;
-    nodesG.innerHTML=''; stops=[];
-    const ns='http://www.w3.org/2000/svg';
-    // length at each stop
-    let acc=0, step=4, lens=[]; for(let s=0;s<=L;s+=step) lens.push(s);
-    pts.slice(1).forEach(p=>{ let best=0,bd=1e9; for(const s of lens){const q=live.getPointAtLength(s); const dd=Math.abs(q.y-p.y)+Math.abs(q.x-p.x); if(dd<bd){bd=dd;best=s;}}
-      const h=document.createElementNS(ns,'circle'); h.setAttribute('class','halo'); h.setAttribute('cx',p.x); h.setAttribute('cy',p.y); h.setAttribute('r',11); nodesG.appendChild(h);
-      const c=document.createElementNS(ns,'circle'); c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',4.5); nodesG.appendChild(c);
-      stops.push({len:best, els:[c,h]}); });
-    // y→length lookup
-    route._lut=lens.map(s=>({s, y:live.getPointAtLength(s).y}));
-    built=true; update(true);
-  }
-  function lenAtY(y){ const lut=route._lut; if(!lut||!lut.length)return 0; if(y<=lut[0].y)return 0; for(let i=1;i<lut.length;i++){ if(lut[i].y>=y){const a=lut[i-1],b=lut[i]; return a.s+(b.s-a.s)*((y-a.y)/Math.max(1e-3,b.y-a.y));} } return L; }
-  function update(snap){
-    const mt=main.getBoundingClientRect().top+scrollY;
-    target=lenAtY(scrollY+innerHeight*.62-mt);
-    if(snap||RM) cur=target;
-  }
-  (function loop(){ if(built){ cur+=(target-cur)*.12; live.style.strokeDashoffset=Math.max(0,L-cur);
-      const p=live.getPointAtLength(Math.max(0,Math.min(L,cur))); head.setAttribute('cx',p.x); head.setAttribute('cy',p.y); head.style.opacity=cur>2&&cur<L-2?1:(cur>=L-2?1:0);
-      stops.forEach(st=>st.els.forEach(e=>e.classList.toggle('on',cur>=st.len-2))); }
-    requestAnimationFrame(loop); })();
-  addEventListener('scroll',()=>update(false),{passive:true});
-  addEventListener('resize',()=>{clearTimeout(route._t); route._t=setTimeout(build,200)});
-  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(build,300));
-}
-/* card spotlight */
-if(!touch)document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}));
 
 })();
 </script>
@@ -1035,7 +893,7 @@ scene.add(atmoMat(1.2, 2.0, 1.05));    // wide haze
 attribute float b, r, eu; uniform float time, px, cursorAmt; uniform vec3 sun, cursor; varying float vA; varying vec3 vC;
       void main(){ vec4 mv = modelViewMatrix*vec4(position,1.); vec3 N = normalize(normalMatrix*position);
         float f = max(dot(N, normalize(-mv.xyz)), 0.); float day = smoothstep(-.1,.35,dot(N,sun));
-        float tw = .75 + .25*sin(time*(.6+r*1.8) + r*60.);
+        float tw = .92 + .08*sin(time*(.35+r*.6) + r*60.);
         float cur = exp(-pow(distance(normalize(position), cursor),2.)/.01) * cursorAmt;
         float ang = rAng(position); float on = smoothstep(0., .22, intro - ang);
         float wv = exp(-pow((intro-ang)/.04,2.)) + exp(-pow((scan-ang)/.035,2.)) * smoothstep(1.35,.5,scan);
@@ -1089,7 +947,7 @@ const NET_P = [];
 attribute float ph, eu; uniform float time; uniform vec3 sun; varying float vA;
       void main(){ vec4 mv = modelViewMatrix*vec4(position,1.); vec3 N = normalize(normalMatrix*position);
         float f = max(dot(N, normalize(-mv.xyz)), 0.); float day = smoothstep(-.1,.4,dot(N,sun));
-        float sh = .35 + .65*pow(.5+.5*sin(time*.7 + ph), 3.);
+        float sh = .55 + .25*sin(time*.25 + ph);
         float ang = rAng(position); float wv = exp(-pow((scan-ang)/.05,2.)) * smoothstep(1.35,.5,scan);
         vA = ((.1 + .32*eu) * sh * (1.-day*.7) * smoothstep(.1,.4,intro-ang) + wv*.35) * smoothstep(0.,.4,f); gl_Position = projectionMatrix*mv; }`,
     fragmentShader: `varying float vA; void main(){ gl_FragColor = vec4(vec3(.62,.88,1.)*vA, 1.); }` })));
@@ -1104,11 +962,11 @@ attribute float ph, eu; uniform float time; uniform vec3 sun; varying float vA;
         float f = max(dot(N, normalize(-mv.xyz)), 0.); float day = smoothstep(-.1,.4,dot(N,sun));
         vP = fract(time*(.12 + r*.18) + r*7.);
         vA = (.35 + .6*eu) * smoothstep(0.,.4,f) * (1.-day*.7);
-        gl_PointSize = px * (5. + 7.*eu); gl_Position = projectionMatrix*mv; }`,
+        gl_PointSize = px * (3.5 + 4.*eu); gl_Position = projectionMatrix*mv; }`,
     fragmentShader: `varying float vA; varying float vP; void main(){ float d = length(gl_PointCoord-.5)*2.;
         float core = smoothstep(.32,.0,d);
         float ring = smoothstep(.08,0.,abs(d - (.35 + vP*.6))) * (1.-vP);
-        float a = (core*.9 + ring*.8) * vA; if(a<.003) discard; gl_FragColor = vec4(vec3(.7,.92,1.)*a, 1.); }` })));
+        float a = core * .75 * vA; if(a<.003) discard; gl_FragColor = vec4(vec3(.7,.92,1.)*a, 1.); }` })));
 }
 
 /* ---------- journeys: smooth city-to-city routes ---------- */
@@ -1117,11 +975,9 @@ const JOURNEYS = [
   ['riga', 'vilnius', 'warsaw', 'berlin', 'copenhagen', 'stockholm', 'helsinki', 'tallinn', 'riga'],
   ['riga', 'berlin', 'amsterdam', 'london', 'paris', 'madrid', 'lisbon'],
   ['riga', 'warsaw', 'prague', 'vienna', 'milan', 'rome', 'athens'],
-  ['riga', 'stockholm', 'oslo', 'copenhagen', 'frankfurt', 'brussels', 'paris'],
-  ['riga', 'vilnius', 'budapest', 'bucharest', 'athens']
 ];
-const SPEED = .2;      // radians of arc per second
-const DWELL = .45;     // seconds resting at each city
+const SPEED = .14;      // radians of arc per second
+const DWELL = .7;     // seconds resting at each city
 const segVS = `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`;
 const segFS = `uniform float head, trail, act; varying vec2 vUv;
   void main(){ float u = vUv.x; if(u > head) discard;
@@ -1174,7 +1030,7 @@ sunSprite.renderOrder = 10; scene.add(sunSprite);
 
 /* ---------- particles around the globe ---------- */
 const dust = (() => {
-  const n = MOBILE ? 500 : 1100, p = new Float32Array(n * 3), r = new Float32Array(n);
+  const n = MOBILE ? 120 : 260, p = new Float32Array(n * 3), r = new Float32Array(n);
   for (let i = 0; i < n; i++) {
     const rad = 1.06 + Math.pow(Math.random(), 1.6) * .9, th = Math.random() * 6.283, z = Math.random() * 2 - 1, s = Math.sqrt(1 - z * z);
     p.set([rad * s * Math.cos(th), rad * z, rad * s * Math.sin(th)], i * 3); r[i] = Math.random();
@@ -1182,11 +1038,11 @@ const dust = (() => {
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(p, 3)); g.setAttribute('r', new THREE.BufferAttribute(r, 1));
   const m = new THREE.Points(g, new THREE.ShaderMaterial({ ...ADD, uniforms: U,
     vertexShader: `attribute float r; uniform float time, px; varying float vA; varying float vS;
-      void main(){ float a = time*(.01 + r*.025); mat2 R = mat2(cos(a),-sin(a),sin(a),cos(a));
+      void main(){ float a = time*(.004 + r*.008); mat2 R = mat2(cos(a),-sin(a),sin(a),cos(a));
         vec3 p = position; p.xz = R*p.xz; p.y += sin(time*.2 + r*20.)*.02;
         vec4 mv = modelViewMatrix*vec4(p,1.);
-        float big = step(.94, r); vS = big;
-        vA = (.12 + .35*r) * (.6 + .4*sin(time*(.5+r) + r*40.)) * (big > .5 ? .35 : 1.);
+        float big = 0.; vS = big;
+        vA = (.08 + .2*r);
         gl_PointSize = px * (big > .5 ? 10. + r*14. : 1. + r*1.8) * (3.6 / -mv.z); gl_Position = projectionMatrix*mv; }`,
     fragmentShader: `varying float vA; varying float vS; void main(){ float d = length(gl_PointCoord-.5)*2.; if(d>1.) discard;
         float a = vS > .5 ? smoothstep(1.,.2,d)*.5 : smoothstep(1.,.0,d); gl_FragColor = vec4(vec3(.55,.82,1.)*a*vA, 1.); }` }));
@@ -1199,7 +1055,7 @@ const dust = (() => {
   for (let i = 0; i < n; i++) { p.set([(Math.random() - .5) * 60, (Math.random() - .5) * 36, -14 - Math.random() * 16], i * 3); a[i] = Math.random(); }
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(p, 3)); g.setAttribute('a', new THREE.BufferAttribute(a, 1));
   const stars = new THREE.Points(g, new THREE.ShaderMaterial({ ...ADD, uniforms: U,
-    vertexShader: `attribute float a; varying float vA; uniform float time, px; void main(){ vA = (.15 + .6*a*a) * (.65 + .35*sin(time*(.4+a) + a*50.)); gl_PointSize = px*(.7 + 1.6*a*a); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+    vertexShader: `attribute float a; varying float vA; uniform float time, px; void main(){ vA = (.12 + .5*a*a) * (.9 + .1*sin(time*(.2+a*.3) + a*50.)); gl_PointSize = px*(.7 + 1.6*a*a); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
     fragmentShader: `varying float vA; void main(){ vec2 c = gl_PointCoord-.5; float d = dot(c,c); if(d>.25) discard; gl_FragColor = vec4(vec3(.78,.9,1.)*vA*(1.-d*4.), 1.); }` }));
   stars.renderOrder = -5; scene.add(stars);
 }
@@ -1269,7 +1125,7 @@ function updateLinks(dir) {
 /* ---------- post: bloom ---------- */
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
-const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), .7, .42, .62);
+const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), .6, .42, .64);
 composer.addPass(bloom);
 
 /* ---------- orientation, interaction, parallax ---------- */
@@ -1284,7 +1140,7 @@ function cursorHit(e) {
   ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
   ray.setFromCamera(ndc, camera);
   const hit = ray.intersectObject(earth, false)[0];
-  if (hit) { inv.copy(globe.matrixWorld).invert(); U.cursor.value.copy(hit.point).applyMatrix4(inv).normalize(); cursorTarget = 1; updateLinks(U.cursor.value); }
+  if (hit) { inv.copy(globe.matrixWorld).invert(); U.cursor.value.copy(hit.point).applyMatrix4(inv).normalize(); cursorTarget = 0; }
   else cursorTarget = 0;
 }
 cv.addEventListener('mousedown', e => e.preventDefault());
@@ -1340,7 +1196,7 @@ function tick(now) {
   const t = (now - t0) / 1000;
   U.time.value = RM ? 0 : t;
   U.intro.value = RM ? 10 : Math.max(0, t - .5) * .62;
-  const sc = t - 4.2; U.scan.value = RM || sc < 0 ? -1 : (sc % 8.5) * .4;
+  U.scan.value = -1;
   const introK = RM ? 1 : ease(Math.min(1, t / 3.4));
   const scrollP = Math.min(1, Math.max(0, scrollY / innerHeight));
 
@@ -1350,7 +1206,7 @@ function tick(now) {
     yaw += vYaw; pitch = Math.max(-.5, Math.min(1.1, pitch + vPitch));
     const idle = (now - lastInteract) / 1000;
     if (idle > 1.8) {
-      const tyaw = BASE.yaw + (RM ? 0 : Math.sin(t * .045) * .14 + Math.sin(t * .11) * .025);
+      const tyaw = BASE.yaw + (RM ? 0 : Math.sin(t * .035) * .12);
       let dyw = tyaw - yaw; dyw = Math.atan2(Math.sin(dyw), Math.cos(dyw));
       const k = Math.min(1, (idle - 1.8) / 3.5) * dt * 1.4;
       yaw += dyw * k; pitch += (BASE.pitch - pitch) * k;
@@ -1365,9 +1221,9 @@ function tick(now) {
   const ca = U.cursorAmt.value;
   reticle.position.copy(U.cursor.value).multiplyScalar(1.005);
   reticle.quaternion.setFromUnitVectors(ZAX, U.cursor.value).multiply(qSpin.setFromAxisAngle(ZAX, t * .6));
-  reticle.material.opacity = ca * .9; reticle.scale.setScalar(.07 + .008 * Math.sin(t * 3));
-  linkMat.opacity = ca * (.55 + .2 * Math.sin(t * 4));
-  linkDots.forEach((s, k) => { s.material.opacity = k < linkCount ? ca * (.7 + .3 * Math.sin(t * 3 + k)) : 0; });
+  reticle.material.opacity = 0; reticle.scale.setScalar(.07 + .008 * Math.sin(t * 3));
+  linkMat.opacity = 0;
+  linkDots.forEach((s, k) => { s.material.opacity = 0; });
   U.cursorAmt.value += (cursorTarget - U.cursorAmt.value) * Math.min(1, dt * 4);
 
   // journeys
@@ -1388,9 +1244,9 @@ function tick(now) {
     });
     J.comet.material.opacity += ((cometOn ? 1 : 0) - J.comet.material.opacity) * Math.min(1, dt * 8);
   });
-  cityGlow.forEach(s => { s.userData.e *= Math.pow(.45, dt); s.material.opacity = Math.min(1, .18 + .7 * s.userData.e); s.scale.setScalar(.03 + .025 * s.userData.e); });
-  hq.scale.setScalar(.05 + .008 * Math.sin(t * 1.6));
-  rings.forEach(r => { const ph = ((RM ? 0 : t) * .3 + r.userData.ph) % 1; r.scale.setScalar(.012 + ph * .07); r.material.opacity = Math.pow(1 - ph, 2) * .45; });
+  cityGlow.forEach(s => { s.userData.e *= Math.pow(.6, dt); s.material.opacity = Math.min(1, .16 + .4 * s.userData.e); s.scale.setScalar(.03 + .01 * s.userData.e); });
+  hq.scale.setScalar(.05 + .004 * Math.sin(t * .8));
+  rings.forEach(r => { const ph = ((RM ? 0 : t) * .3 + r.userData.ph) % 1; r.scale.setScalar(.012 + ph * .05); r.material.opacity = Math.pow(1 - ph, 2) * .25; });
 
   // sun flare sits on the limb in the sun's direction (screen space)
   sunPos.set(SUN.x, SUN.y, 0).normalize().multiplyScalar(1.0);
