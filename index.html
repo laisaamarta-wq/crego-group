@@ -1100,7 +1100,7 @@ const dust = (() => {
         void main(){ float run = .55 + .45*pow(.5+.5*sin(vUv.x*6.2832*2. - time*1.2), 6.);
           float on = smoothstep(.05,.35,intro);
           gl_FragColor = vec4(vec3(1.,.78,.4) * op * run * on, 1.); }` }));
-    globe.add(mk(.0016, 1.25)); globe.add(mk(.006, .16));
+    globe.add(mk(.0007, .8)); globe.add(mk(.0026, .09));
   });
   const n = LV.pts.length / 2, pos = new Float32Array(n * 3), rnd = new Float32Array(n);
   for (let i = 0; i < n; i++) { const v = vec(LV.pts[i * 2 + 1], LV.pts[i * 2], 1.0022); pos.set([v.x, v.y, v.z], i * 3); rnd[i] = Math.random(); }
@@ -1166,7 +1166,7 @@ function cursorHit(e) {
   ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
   ray.setFromCamera(ndc, camera);
   const hit = ray.intersectObject(earth, false)[0];
-  if (hit) { inv.copy(globe.matrixWorld).invert(); U.cursor.value.copy(hit.point).applyMatrix4(inv).normalize(); cursorTarget = 0; }
+  if (hit) { inv.copy(globe.matrixWorld).invert(); U.cursor.value.copy(hit.point).applyMatrix4(inv).normalize(); cursorTarget = 1; updateLinks(U.cursor.value); }
   else cursorTarget = 0;
 }
 cv.addEventListener('mousedown', e => e.preventDefault());
@@ -1177,7 +1177,7 @@ cv.addEventListener('pointerdown', e => {
 });
 addEventListener('pointermove', e => {
   if (e.pointerType !== 'touch') { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }
-  if (e.target === cv && e.pointerType !== 'touch') cursorHit(e); else if (!drag) cursorTarget = 0;
+  if (e.target === cv || (drag && e.pointerType === 'touch')) cursorHit(e); else if (!drag) cursorTarget = 0;
   if (!drag || e.pointerId !== drag.id) return;
   const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
   if (drag.type === 'touch' && Math.abs(dy) > Math.abs(dx) && !drag.moved) { end(); return; }
@@ -1188,7 +1188,7 @@ addEventListener('pointermove', e => {
   lastInteract = performance.now(); wrap.classList.add('used');
 });
 cv.addEventListener('pointerleave', () => { cursorTarget = 0; });
-function end() { drag = null; wrap.classList.remove('dragging'); document.body.classList.remove('no-select'); }
+function end() { if (drag && drag.type === 'touch') cursorTarget = 0; drag = null; wrap.classList.remove('dragging'); document.body.classList.remove('no-select'); }
 addEventListener('pointerup', end); addEventListener('pointercancel', end);
 
 /* ---------- layout ---------- */
@@ -1247,9 +1247,9 @@ function tick(now) {
   const ca = U.cursorAmt.value;
   reticle.position.copy(U.cursor.value).multiplyScalar(1.005);
   reticle.quaternion.setFromUnitVectors(ZAX, U.cursor.value).multiply(qSpin.setFromAxisAngle(ZAX, t * .6));
-  reticle.material.opacity = 0; reticle.scale.setScalar(.07 + .008 * Math.sin(t * 3));
-  linkMat.opacity = 0;
-  linkDots.forEach((s, k) => { s.material.opacity = 0; });
+  reticle.material.opacity = ca * .75; reticle.scale.setScalar(.07 + .008 * Math.sin(t * 3));
+  linkMat.opacity = ca * (.5 + .15 * Math.sin(t * 2.5));
+  linkDots.forEach((s, k) => { s.material.opacity = k < linkCount ? ca * (.65 + .25 * Math.sin(t * 2 + k)) : 0; });
   U.cursorAmt.value += (cursorTarget - U.cursorAmt.value) * Math.min(1, dt * 4);
 
   // journeys
